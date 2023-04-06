@@ -1,0 +1,643 @@
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>var __ez=__ez||{};__ez.stms=Date.now();__ez.evt={};__ez.script={};__ez.ck=__ez.ck||{};__ez.template={};__ez.template.isOrig=false;__ez.queue=function(){var e=0,i=0,t=[],n=!1,o=[],s=[],r=!0,a=function(e,i,n,o,s,r,a){var l=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,c=this;this.name=e,this.funcName=i,this.parameters=null===n?null:p(n)?n:[n],this.isBlock=o,this.blockedBy=s,this.deleteWhenComplete=r,this.isError=!1,this.isComplete=!1,this.isInitialized=!1,this.proceedIfError=a,this.fWindow=l,this.isTimeDelay=!1,this.process=function(){f("... func = "+e),c.isInitialized=!0,c.isComplete=!0,f("... func.apply: "+e);var i=c.funcName.split("."),n=null,o=this.fWindow||window;i.length>3||(n=3===i.length?o[i[0]][i[1]][i[2]]:2===i.length?o[i[0]][i[1]]:o[c.funcName]),null!=n&&n.apply(null,this.parameters),!0===c.deleteWhenComplete&&delete t[e],!0===c.isBlock&&(f("----- F'D: "+c.name),u())}},l=function(e,i,t,n,o,s,r){var a=arguments.length>7&&void 0!==arguments[7]?arguments[7]:window,l=this;this.name=e,this.path=i,this.async=o,this.defer=s,this.isBlock=t,this.blockedBy=n,this.isInitialized=!1,this.isError=!1,this.isComplete=!1,this.proceedIfError=r,this.fWindow=a,this.isTimeDelay=!1,this.isPath=function(e){return"/"===e[0]&&"/"!==e[1]},this.getSrc=function(e){return void 0!==window.__ezScriptHost&&this.isPath(e)?window.__ezScriptHost+e:e},this.process=function(){l.isInitialized=!0,f("... file = "+e);var i=this.fWindow?this.fWindow.document:document,t=i.createElement("script");t.src=this.getSrc(this.path),!0===o?t.async=!0:!0===s&&(t.defer=!0),t.onerror=function(){f("----- ERR'D: "+l.name),l.isError=!0,!0===l.isBlock&&u()},t.onreadystatechange=t.onload=function(){var e=t.readyState;f("----- F'D: "+l.name),e&&!/loaded|complete/.test(e)||(l.isComplete=!0,!0===l.isBlock&&u())},i.getElementsByTagName("head")[0].appendChild(t)}},c=function(e,i){this.name=e,this.path="",this.async=!1,this.defer=!1,this.isBlock=!1,this.blockedBy=[],this.isInitialized=!0,this.isError=!1,this.isComplete=i,this.proceedIfError=!1,this.isTimeDelay=!1,this.process=function(){}};function d(e){!0!==h(e)&&0!=r&&e.process()}function h(e){if(!0===e.isTimeDelay&&!1===n)return f(e.name+" blocked = TIME DELAY!"),!0;if(p(e.blockedBy))for(var i=0;i<e.blockedBy.length;i++){var o=e.blockedBy[i];if(!1===t.hasOwnProperty(o))return f(e.name+" blocked = "+o),!0;if(!0===e.proceedIfError&&!0===t[o].isError)return!1;if(!1===t[o].isComplete)return f(e.name+" blocked = "+o),!0}return!1}function f(e){var i=window.location.href,t=new RegExp("[?&]ezq=([^&#]*)","i").exec(i);"1"===(t?t[1]:null)&&console.debug(e)}function u(){++e>200||(f("let's go"),m(o),m(s))}function m(e){for(var i in e)if(!1!==e.hasOwnProperty(i)){var t=e[i];!0===t.isComplete||h(t)||!0===t.isInitialized||!0===t.isError?!0===t.isError?f(t.name+": error"):!0===t.isComplete?f(t.name+": complete already"):!0===t.isInitialized&&f(t.name+": initialized already"):t.process()}}function p(e){return"[object Array]"==Object.prototype.toString.call(e)}return window.addEventListener("load",(function(){setTimeout((function(){n=!0,f("TDELAY -----"),u()}),5e3)}),!1),{addFile:function(e,i,n,r,a,c,h,f,u){var m=new l(e,i,n,r,a,c,h,u);!0===f?o[e]=m:s[e]=m,t[e]=m,d(m)},addDelayFile:function(e,i){var n=new l(e,i,!1,[],!1,!1,!0);n.isTimeDelay=!0,f(e+" ...  FILE! TDELAY"),s[e]=n,t[e]=n,d(n)},addFunc:function(e,n,r,l,c,h,f,u,m,p){!0===h&&(e=e+"_"+i++);var y=new a(e,n,r,l,c,f,u,p);!0===m?o[e]=y:s[e]=y,t[e]=y,d(y)},addDelayFunc:function(e,i,n){var o=new a(e,i,n,!1,[],!0,!0);o.isTimeDelay=!0,f(e+" ...  FUNCTION! TDELAY"),s[e]=o,t[e]=o,d(o)},items:t,processAll:u,setallowLoad:function(e){r=e},markLoaded:function(e){if(e&&0!==e.length){if(e in t){var i=t[e];!0===i.isComplete?f(i.name+" "+e+": error loaded duplicate"):(i.isComplete=!0,i.isInitialized=!0)}else t[e]=new c(e,!0);f("markLoaded dummyfile: "+t[e].name)}},logWhatsBlocked:function(){for(var e in t)!1!==t.hasOwnProperty(e)&&h(t[e])}}}();__ez.evt.add=function(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n()},__ez.evt.remove=function(e,t,n){e.removeEventListener?e.removeEventListener(t,n,!1):e.detachEvent?e.detachEvent("on"+t,n):delete e["on"+t]};__ez.script.add=function(e){var t=document.createElement("script");t.src=e,t.async=!0,t.type="text/javascript",document.getElementsByTagName("head")[0].appendChild(t)};__ez.dot={};</script>
+<script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('fads.js', '/porpoiseant/fads.js?gcb=195-4&cb=8', true, [], true, false, false, true);</script>
+<script>var __ezaps=[{"slotID":"div-gpt-ad-akinator_mobi-box-2-0","divID":"","slotName":"/21732118914,11890893/akinator_mobi-box-2","sizes":[[320,50]],"floor":{"value":20,"currency":"USD"}},{"slotID":"div-gpt-ad-akinator_mobi-box-2-0_1","divID":"","slotName":"/21732118914,11890893/akinator_mobi-box-2","sizes":[[320,50]],"floor":{"value":20,"currency":"USD"}},{"slotID":"div-gpt-ad-akinator_mobi-medrectangle-1-0","divID":"","slotName":"/21732118914,11890893/akinator_mobi-medrectangle-1","sizes":[[336,280],[300,250]]}];var __ezapsVideo=[];__ezapid='aa05931b-5308-4ea3-95a2-adf84f4ffde4';</script>
+<script data-ezscrex="false" async data-pagespeed-no-defer type="text/javascript" src="/edmontonalberta/calgary.js?cb=16"></script>
+<script>window.ezslots_raw=[];var __sellerid='666ca7f32b78e8b8e0bafc752e394dee';var __schain_domain='akinator.com';var __ez_nid ='21732118914';__advertiserRule=[''];var ezasVars = {'cid':'7180483261','pid':'pub-6807245920660005','ssid':44};if(typeof window.ezAutoAdsSetup == 'undefined'){window.google_reactive_ads_global_state = {
+                adCount: {},
+                floatingAdsStacking: { maxZIndexListeners: [], maxZIndexRestrictions: {}, nextRestrictionId: 0 },
+                messageValidationEnabled: false,
+                reactiveTypeDisabledByPublisher: {},
+                reactiveTypeEnabledInAsfe: {},
+                sideRailAvailableSpace: [],
+                sideRailOverlappableElements: [],
+                stateForType: {},
+                tagSpecificState: {},
+                wasPlaTagProcessed: true,
+                wasReactiveAdConfigReceived: { 1: true, 2: true, 8: true },
+                wasReactiveAdVisible: {},
+                wasReactiveTagRequestSent: true,
+                description: "Can't disable auto ads programmatically on the page, so here we are!"
+            };};var __ezasAggressive=true;!function(){window.ezasvEvent=function(e,t){if(!0===e[0].isIntersecting){var i=e[0].target.attributes[0].value.substr(0,e[0].target.attributes[0].value.length-9);window.ezoSTPixelAdd(i,"viewed",1),t.disconnect()}},window.ezaslEvent=function(e,t){if(void 0!==e[0].target.attributes["data-ad-status"]){var i=e[0].target.attributes["data-ad-status"].value,o=e[0].target.attributes[0].value.substr(0,e[0].target.attributes[0].value.length-9);"filled"==i&&(window.ezoSTPixelAdd(o,"loaded",1),new IntersectionObserver(window.ezasvEvent,{threshold:[1]}).observe(document.getElementById(o+"-asloaded"))),"unfilled"==i&&setTimeout((function(){window.ezoAdBackFill(e)}),2e3),t.disconnect()}},window.ezoAdBackFill=function(e){var t=e[0].target,i=t.parentElement;t.style.display="none !important";var o,d=ezoGetSlotNum(i.id);if(o=void 0!==__ez.fads?__ez.fads.initslots[i.id]:__ez_fad_initslot[i.id],void 0===d&&"function"==typeof o&&(d=o(6)),void 0!==d)var n=window[d];if(void 0!==n){n.setTargeting("compid","0"),n.setTargeting("bkfl","1"),n.setTargeting("reft","t");var a=n.getTargeting("br2")[0];void 0!==window.ezoibfh&&void 0!==window.ezoibfh[a]&&(n.setTargeting("br1",a),n.setTargeting("eb_br",window.ezoibfh[a])),googletag.display(n),setTimeout((function(){googletag.pubads().refresh([n])}),500)}},window.ezoSTPixels=[];var e=setInterval((function(){"undefined"!=typeof __ez&&"undefined"!=typeof __ezDotData&&"undefined"!=typeof ezslots&&window.ezslots_raw.length>0&&(window.ezoSTPixelFire(),clearInterval(e))}),250);window.ezoSTPixelAdd=function(e,t,i){window.ezoSTPixels.push({id:e,name:t,value:i}),window.ezoSTPixelFire()},window.ezoGetSlotById=function(e){var t=e.split("div-gpt-ad-")[1].split("-",3).join("-");for(var i in window.ezslots_raw)if(window.ezslots_raw[i].tap.includes(t))return window.ezslots_raw[i]},window.ezoGetSlotNum=function(e){if(void 0!==window.ezslots&&0!=window.ezslots)for(var t=0;t<window.ezslots.length;t++){var i=window[ezslots[t]];if(void 0!==i){var o=i.getSlotElementId();if(void 0!==o&&o==e)return ezslots[t]}}},window.ezoSTPixelFire=function(){if("undefined"!=typeof __ez&&"undefined"!=typeof __ezDotData&&"undefined"!=typeof ezslots)for(;window.ezoSTPixels.length>0;){var e=window.ezoSTPixels.shift(),t=window.ezoGetSlotById(e.id);if(void 0===t){var i;if(i=void 0!==__ez.fads?__ez.fads.initslots[e.id]:__ez_fad_initslot[e.id],void 0===googletag.defineSlot)return void window.ezoSTPixels.push(e);if(i(1),void 0===(t=window.ezoGetSlotById(e.id)))return void window.ezoSTPixels.push(e)}var o=[{type:"impression",impression_id:t.eid,domain_id:window.did.toString(),unit:e.id,t_epoch:__ez.dot.getEpoch(0),ad_position:parseInt(t.ap),country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:1,data:__ez.dot.dataToStr([new __ezDotData(e.name,e.value.toString())]),is_orig:0}],d=__ez.dot.getURL("/porpoiseant/army.gif")+"?orig=0&sts="+btoa(JSON.stringify(o));__ez.dot.Fire(d)}}}();</script>
+<script>!function(){var e=setInterval((function(){var t=document.querySelectorAll('[id^="outbrain_widget_"]');0!==t.length&&(function(e){e.forEach((function(e){if(e.parentElement.hasAttribute("data-ez-name")){var t=e.parentElement.attributes["data-ez-name"].value;new IntersectionObserver((function(e,i){e[0].isIntersecting&&(n({unit:t,name:"viewed"}),i.disconnect())}),{threshold:[1]}).observe(e);var i=e.attributes["data-widget-id"].value;window.OBREvents=window.OBREvents||[],OBREvents.push({event:"widgetDataReturned",widgetId:i,func:function(){n({unit:t,name:"loaded"})}})}}))}(t),clearInterval(e))}),250),t=[],i=setInterval((function(){"undefined"!=typeof __ez&&"undefined"!=typeof _ezim_d&&"undefined"!=typeof __ezDotData&&(o(),clearInterval(i))}),2500);function n(e){t.push(e),o()}var d="/porpoiseant/army.gif";function o(){var e,i;if(0!==t.length&&"undefined"!=typeof __ez&&"undefined"!=typeof _ezim_d&&"undefined"!=typeof __ezDotData)for(;t.length>0;){var n=t.shift(),o=(e=n.unit,i=n.name,[{type:"impression",impression_id:_ezim_d[e].full_id.split("/")[2],domain_id:window.did.toString(),unit:e,t_epoch:__ez.dot.getEpoch(0),ad_position:_ezim_d[e].position_id,country_code:__ez.dot.getCC(),pageview_id:__ez.dot.getPageviewId(),comp_id:2,data:__ez.dot.dataToStr([new __ezDotData(i,"1")]),is_orig:0}]),a=__ez.dot.getURL(d)+"?orig="+(!0===__ez.template.isOrig?1:0)+"&sts="+btoa(JSON.stringify(o));void 0!==window.ezWp&&ezWp&&void 0!==window._ezaq&&_ezaq.hasOwnProperty("visit_uuid")&&(a+="&visit_uuid="+window.visit_uuid),__ez.dot.Fire(a)}}}();</script>
+<script>window.ezhbopt=true;</script>
+<script>window.ezpbCache=true;</script>
+<link href="//ad.doubleclick.net" rel="dns-prefetch">
+<link href="//pagead2.googlesyndication.com" rel="dns-prefetch">
+<link href="//googleads.g.doubleclick.net" rel="dns-prefetch">
+<link href="//tpc.googlesyndication.com" rel="dns-prefetch">
+<link href="//adservice.google.com" rel="dns-prefetch">
+<link href="//secureads.g.doubleclick.net" rel="dns-prefetch">
+<link href="//www.googletagservices.com" rel="dns-prefetch">
+<link rel='preload' as='script' href='//securepubads.g.doubleclick.net/tag/js/gpt.js'>
+<link rel='preload' as='script' href='//go.ezodn.com/hb/dall.js?cb=195-4-55' onerror="window.ezDallErr=true">
+<link rel='preload' as='script' href='/porpoiseant/fads.js?gcb=195-4&cb=8'>
+<script type="text/javascript">
+	var __banger_pmp_deals=function(){var d={};return[{"SlotName":"/21732118914,11890893/akinator_mobi-medrectangle-1","Deals":[]},{"SlotName":"/21732118914,11890893/akinator_mobi-box-2","Deals":[]},{"SlotName":"/21732118914,11890893/akinator_mobi-box-2","Deals":[]}]}();
+</script>
+<script type='text/javascript'>_ebcids=[138231308856,138231308940,138231308949,138231387842,138231421744,138231421759,138231421774,138231421783,138231421789,138231421792,138242067587,138242067590,138242067602,138242067605,138242067608,138242067614,138242229406,138242229415,138242229421,138242229430];</script>
+<script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>ezobv=210;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>__ez.fads=window.__ez.fads||{cmd:[],initslots:{},kvStore:{},divs:[[],[],[],[],[],[],[]],divsd:[],fadcount:0};var ez_ad_units=[];var ezslots=[];var ezrpos=[];var ezsrqt={};var __ez_fad_haspo=false;var __ez_fad_hascp=false;if(typeof PerformanceObserver!='undefined'&&typeof PerformanceObserver.supportedEntryTypes!='undefined'){if(PerformanceObserver.supportedEntryTypes.indexOf('largest-contentful-paint')>-1){__ez_fad_haspo=true;}}
+try{var __ez_fad_po=new PerformanceObserver((entryList)=>{window.__ez_fad_hascp=true;__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_hascp=true;});});__ez_fad_po.observe({type:'largest-contentful-paint',buffered:true});}catch(e){}
+var __ez_fad_floatshowd=false;__ez.fads.__ez_fad_floatshow=function(d){if(__ez_fad_floatshowd===true||typeof __ez_fad_floating==='undefined'){return;}
+__ez_fad_floatshowd=true;var e=document.getElementById('ezmobfooter');if(e!=null){e.classList.add('ezmobtrans');}else{var head=document.head||document.getElementsByTagName('head')[0],style=document.createElement('style');head.appendChild(style);var css="body > #ezmobfooter{bottom:0px;visibility:visible;}";style.type='text/css';if(style.styleSheet){style.styleSheet.cssText=css;}else{style.appendChild(document.createTextNode(css));}}
+googletag.cmd.push(function(){for(var i=0;i<__ez_fad_floating.length;i++){var s=__ez.fads.initslots[__ez_fad_floating[i]](null);googletag.display(__ez_fad_floating[i]);if(typeof window.adjustHbValues==='function'){window.adjustHbValues(window[s]);}
+if(typeof window.__ezWillLoadCnx!=='undefined'&&window[s].getTargeting('al')[0]=='1039'){window.__ezsbwcmd=window.__ezsbwcmd||[];let sr=[window[s]];window.__ezsbwcmd.push(function(){if(typeof __ezcnxPlayer==='undefined'||!__ezcnxPlayer.getSize()){googletag.pubads().refresh(sr);}else{__ezcnxPlayer.once('removed',function(){googletag.pubads().refresh(sr);})}});continue;}
+if(typeof window.__ezwfhb!=='undefined'){function ezChkWfhb(x){if(typeof isHbFinished!=='undefined'&&isHbFinished){googletag.pubads().refresh(x);}
+else{setTimeout(()=>{ezChkWfhb(x);},50);}}
+ezChkWfhb([window[s]]);}
+else{googletag.pubads().refresh([window[s]]);}}});};function __ez_fad_csnt(){return document.cookie.indexOf('ezCMPCookieConsent')!==-1||typeof __ez_conestreq=='undefined';}
+function __ez_fad_rdy(){var h=document.documentElement.scrollHeight;var vh=window.innerHeight||Math.max(document.documentElement.clientHeight,document.body.clientHeight);if(document.body!==null&&(__ez_fad_haspo===false&&h>vh||__ez_fad_hascp||document.readyState==='complete')){return true;}}
+function __ez_fad_position(id){if(__ez.fads.loaded){__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_position(id);});return;}
+__ez.fads.fadcount++;var did=document.getElementById(id);if(did===null){return;}
+var rect=did.getBoundingClientRect();var vs=window.scrollY||document.body.scrollTop||document.documentElement.scrollTop;var vh=vs+window.screen.height;var vw=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;var vh=window.innerHeight||Math.max(document.documentElement.clientHeight,document.body.clientHeight);if(rect.top>=vh){__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_position(id);});return;}
+__ez.fads.divs[0].push(id);__ez.fads.divsd.push(id);if(!__ez_fad_csnt()||!__ez_fad_rdy()){setTimeout(function(){__ez_fad_display(id);},50);return;}
+__ez_fad_display(id);}
+function __ez_fad_display(id){if(!__ez_fad_csnt()||!__ez_fad_rdy()){setTimeout(function(){__ez_fad_display(id);},50);return;}
+__ez_fad_gpt();if(__ez_fad_floating.indexOf(id)!==-1){setTimeout(__ez.fads.__ez_fad_floatshow,0);return;}
+googletag.cmd.push(function(){var sn=__ez.fads.initslots[id](0);if(!sn){return;}
+var s=window[sn];googletag.display(id);if(typeof window.ezasBuild==='function'){if(window.ezasBuild(s)){return;}}
+if(typeof window.adjustHbValues==='function'){window.adjustHbValues(s);}
+if(typeof window.__ezwfhb!=='undefined'){function ezChkWfhb(){if(typeof isHbFinished!=='undefined'&&isHbFinished){googletag.pubads().refresh([s]);}
+else{setTimeout(ezChkWfhb,50);}}
+ezChkWfhb();}
+else{googletag.pubads().refresh([s]);}});}
+function ezSetTargetingFromMap(slot,obj){if(typeof slot==='undefined'){return;}
+for(var key in obj){if(!obj.hasOwnProperty(key)){continue;}
+slot.setTargeting(key,obj[key]);}}
+function ezSetSlotTargeting(divid,key,value){var slot=ezGetSlotById(divid);if(slot){slot.setTargeting(key,value);}else{if(typeof __ez.fads.kvStore[divid]=='undefined'){__ez.fads.kvStore[divid]={};}
+__ez.fads.kvStore[divid][key]=value;}}
+function ezGetSlotById(id){if(typeof window.ezslots==='undefined'||window.ezslots==0){return;}
+for(var i=0;i<window.ezslots.length;i++){var slot=window[ezslots[i]];if(typeof slot==='undefined'){continue;}
+var slotId=slot.getSlotElementId();if(typeof slotId!=='undefined'&&slotId==id){return slot;}}}
+function __ez_close_anchor(){googletag.cmd.push(function(slot){for(var i=0;i<window.ezslots.length;i++){var slot=window[ezslots[i]];if(typeof slot==='undefined'){continue;}
+var alS=slot.getTargeting('al')[0]%1000;if(alS==5){googletag.destroySlots([slot]);}}
+if(typeof window.ezdomain!=='undefined'){var d=new Date();d.setTime(d.getTime()+(2*60*60*1000));var expires="expires="+d.toGMTString();let cookie="ez_anchor_closed=true;domain=."+ezdomain+';'+expires+"; path=/";document.cookie=cookie;}
+if(typeof(__ez_set_outstream_floor)!=='undefined'){__ez_set_outstream_floor(0);}
+var anchor=document.getElementById('ezmobfooter');if(!anchor){return;}
+anchor.innerHTML='';var styleElement=document.getElementById('ezoicCSS');if(!styleElement){return;}
+var cert=document.getElementById('ezoic-certification-fixed');if(cert){cert.style.bottom='15px';}
+var styles=styleElement.sheet?styleElement.sheet:styleElement.styleSheet;for(var i=0;i<styles.cssRules.length;i++){var rules=styles.cssRules[i];if(rules.selectorText==='body'&&rules.style.height==='auto'&&(rules.style.paddingTop!==''||rules.style.paddingBottom!=='')){styles.deleteRule(i);}}});}</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.isEZABL=false;window.ezmadspc=300;window.ezoViewCheck=true;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezDisableInitialLoad=false;</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.googletag=window.googletag||{};googletag.cmd=googletag.cmd||[];</script><script data-ezscrex="false" data-cfasync="false" data-pagespeed-no-defer type='text/javascript'>window.ezogetbrkey = function(s){ var k = 'br1';var k2 = 'eb_br';if(window.ezogtk == ""){k='br1u';k2='eb_bru';}else if(window.ezogtk != "NT"){k='br1t';k2='eb_brt';} s.setTargeting('br1', s.getTargeting(k));s.setTargeting('eb_br', s.getTargeting(k2));};googletag.cmd.push(function() {googletag.pubads().enableSingleRequest();googletag.pubads().addEventListener('slotRenderEnded', function(event) { __ez.queue.addFunc("ezbanger", "ezbanger", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('impressionViewable', function(event) { __ez.queue.addFunc("ezvb", "ezvb", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotResponseReceived', function(event) { __ez.queue.addFunc("ezsr", "ezsr", event, false, ['banger.js'], true, true, false, true); });googletag.pubads().addEventListener('slotRequested', function(e) { window.ezsrqt[e.slot.getSlotElementId()] = Date.now();});googletag.pubads().disableInitialLoad();googletag.pubads().enableLazyLoad({fetchMarginPercent: 300, renderMarginPercent: 200, mobileScaling: 2.0});googletag.enableServices();});window.ezoll = false;window.ezoadxnc = '21732118914';window.ezoadhb = '12';var ezaxmns={};var ezaucmns={};
+
+		var __ez_fad_floating = [];
+		var __ez_fad_gptd = __ez_fad_gptd || false;var __ez_fad_ezpbinitd = false;var __ez_fad_pbt = setTimeout(function(){__ez_fad_pb();},5000);function __ez_fad_gpt(){if(__ez_fad_gptd == false){__ez_fad_gptd=true;!function(){var t=document.createElement("script");t.async=!0,t.type="text/javascript";var e="https:"==document.location.protocol;t.src=(e?"https:":"http:")+"//securepubads.g.doubleclick.net/tag/js/gpt.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(t,c)}();}}function __ez_fad_pb(){if(__ez_fad_ezpbinitd==false && typeof __ez_fad_ezpbinit == 'function'){__ez_fad_ezpbinitd = true;__ez_fad_ezpbinit()}};
+		
+	function __ez_init_slot(bvr, did, slotNum, defineFunc) {
+		googletag.cmd.push(function() {
+			defineFunc();
+			ezrpos[slotNum]=slotNum;
+			ezslots.push("ezslot_" + slotNum);
+			if(__ez.fads.kvStore[did] !== 'undefined') {
+				for (var name in __ez.fads.kvStore[did]) {
+					if (!__ez.fads.kvStore.hasOwnProperty(name)) {
+						ezSetSlotTargeting(did, name, __ez.fads.kvStore[did][name]);
+					}
+				}
+				__ez.fads.kvStore[did] = {};
+			}
+		});return "ezslot_" + slotNum;
+	}
+__ez.fads.initslots['div-gpt-ad-akinator_mobi-box-2-0'] = function(bvr){
+				var defScript = function() {ezslot_0 = googletag.defineSlot('/21732118914,11890893/akinator_mobi-box-2',[320,50],'div-gpt-ad-akinator_mobi-box-2-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_0_raw = {'a':'1','iid1':'5029392646391434','eid':'5029392646391434','t':'135','d':'130066','t1':'135','pvc':'10','ap':'2104','sap':'2104','a':'|0|','as':'revenue','plat':'2','bra':'mod7','ic':'1','at':'mbf','adr':'399','ezosn':'0','reft':'tf','refs':'30','refa':'0','ga':'5302779','gala':'2709606','rid':'99998','pt':'1','al':'2001','compid':'0','tap':'akinator_mobi-box-2-5029392646391434','eb_br':'063a7705d5a9d51bc46e0a87fba28a89','eba':'1','ebss':[10017,10082,10061,10015,10063,11304,11307],'gas':'2945948490','bv':'19','bvm':'0','bvr':'9','avc':'13','shp':'1','ftsn':'12','ftsng':'12','acptad':'1','br1':'4','br2':'2','ezoic':'1','nmau':'2','mau':'0','stl':[84,152,194,27,94,122,91,20,26,201,187,31,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,27,28,29,30,760,761,813,814,815,816,817,818,819,893,899,903,917,918,919,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,3915,3919,3933,4184,4185,4186,4276,4604,4605,1893,4769,4769,4769,4769,4347,5136,774],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_0_raw);ezSetTargetingFromMap(ezslot_0,ezslot_0_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-akinator_mobi-box-2-0',0, defScript);
+			};__ez.fads.initslots['div-gpt-ad-akinator_mobi-box-2-0_1'] = function(bvr){
+				var defScript = function() {ezslot_1 = googletag.defineSlot('/21732118914,11890893/akinator_mobi-box-2',[320,50],'div-gpt-ad-akinator_mobi-box-2-0_1').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_1_raw = {'a':'1','iid1':'5029392646391434','eid':'5029392646391434','t':'135','d':'130066','t1':'135','pvc':'10','ap':'2104','sap':'2104','a':'|0|','as':'revenue','plat':'2','bra':'mod7','ic':'1','at':'mbf','adr':'399','ezosn':'1','reft':'tf','refs':'30','refa':'0','ga':'5302779','gala':'2709606','rid':'99998','pt':'1','al':'2001','compid':'0','tap':'akinator_mobi-box-2-5029392646391434','eb_br':'063a7705d5a9d51bc46e0a87fba28a89','eba':'1','ebss':[10017,10082,10061,10015,10063,11304,11307],'gas':'2945948490','bv':'19','bvm':'0','bvr':'9','avc':'13','shp':'1','ftsn':'12','ftsng':'12','acptad':'1','br1':'4','br2':'2','ezoic':'1','nmau':'2','mau':'1','stl':[83,13,28,67,49,0,66,20,71,30,0,31,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,27,28,29,30,760,761,813,814,815,816,817,818,819,893,899,903,917,918,919,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,3915,3919,3933,4184,4185,4186,4276,4604,4605,1893,4769,4769,4769,4769,4347,5136,774],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_1_raw);ezSetTargetingFromMap(ezslot_1,ezslot_1_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-akinator_mobi-box-2-0_1',1, defScript);
+			};__ez.fads.initslots['div-gpt-ad-akinator_mobi-medrectangle-1-0'] = function(bvr){
+				var defScript = function() {ezslot_2 = googletag.defineSlot('/21732118914,11890893/akinator_mobi-medrectangle-1',[[336,280],[320,100],[120,240],[234,60],[300,250],[320,50],[250,250],[200,200],[180,150],[125,125],['fluid'],[300,600]],'div-gpt-ad-akinator_mobi-medrectangle-1-0').addService(googletag.pubads()).setCollapseEmptyDiv(false);var ezslot_2_raw = {'a':'1','iid1':'1425365912396019','eid':'1425365912396019','t':'135','d':'130066','t1':'135','pvc':'10','ap':'2102','sap':'2102','a':'|0|','as':'revenue','plat':'2','bra':'mod7','ic':'1','at':'mbf','adr':'399','ezosn':'2','reft':'tf','refs':'30','refa':'0','ga':'5302779','gala':'2709606','rid':'99998','pt':'4','al':'2004','compid':'0','tap':'akinator_mobi-medrectangle-1-1425365912396019','eb_br':'41f20af1f102ac44e83c11508b6865c1','eba':'1','ebss':[10017,10082,10061,10015,10063,11304,11307],'gas':'2775376346','bv':'19','bvm':'0','bvr':'9','avc':'9','shp':'2','ftsn':'12','ftsng':'12','acptad':'1','br1':'12','br2':'6','ezoic':'1','nmau':'0','mau':'0','stl':[118,189,120,27,97,122,132,20,71,31,175,31,901,902,903],'deal1':[17,18,19,20,21,22,23,24,25,26,919,1428,1794,2310,2339,2351,2526,2527,2610,2688,2693,2761,2763,2764,2765,3044,3045,3052,3053,3054,3154,3430,3455,3456,3457,3458,3460,3682,3683,3684,3856,3919,3933,4184,4185,4186,4276,4604,4605,1893,4769,4769,4769,4769,4347,5136,774],'ax_ssid':'10082'}; window.ezslots_raw.push( ezslot_2_raw);ezSetTargetingFromMap(ezslot_2,ezslot_2_raw);};
+				return __ez_init_slot(bvr,'div-gpt-ad-akinator_mobi-medrectangle-1-0',2, defScript);
+			};</script>
+<script type="text/javascript">(function(){function storageAvailable(type){var storage;try{storage=window[type];var x='__storage_test__';storage.setItem(x,x);storage.removeItem(x);return true;}
+catch(e){return e instanceof DOMException&&(e.code===22||e.code===1014||e.name==='QuotaExceededError'||e.name==='NS_ERROR_DOM_QUOTA_REACHED')&&(storage&&storage.length!==0);}}
+function remove_ama_config(){if(storageAvailable('localStorage')){localStorage.removeItem("google_ama_config");}}
+remove_ama_config()})()</script>
+<script type="text/javascript">var ezoicTestActive = true</script>
+<script data-ezscrex="false" type="text/javascript" data-cfasync="false">var _ezaq = {"ab_test_id":"mod7","ad_cache_level":2,"ad_count_adjustment":1,"ad_lazyload_version":2,"ad_load_version":1,"ad_location_ids":"1,1,4","adx_ad_count":3,"bidder_method":1,"bidder_version":1,"city":"Baghdad","country":"IQ","days_since_last_visit":-1,"display_ad_count":2,"domain_id":130066,"domain_test_group":20230809,"ds_adsize_opt_id":-1,"engaged_time_visit":64,"ezcache_level":1,"ezcache_skip_code":11,"form_factor_id":2,"framework_id":2,"has_bad_image":0,"has_bad_words":0,"iab_category":"","iab_category_0":"239","iab_category_1":"680","is_from_recommended_pages":false,"is_return_visitor":false,"is_sitespeed":0,"last_page_load":"1680774404840","last_pageview_id":"78458c81-626e-4a3c-5ebf-c1e45251ba1d","lt_cache_level":0,"max_ads":2,"metro_code":0,"optimization_version":1,"page_ad_positions":"2102,2104,2104","page_view_count":10,"page_view_id":"76c0a4e6-d0ce-4e0e-626d-5930c39e25fb","position_selection_id":46,"postal_code":"","pv_event_count":0,"response_size_orig":22100,"response_time_orig":460,"serverid":"i-05ea5dd6911ebc2d4","state":"BG","sub_page_ad_positions":"2102,2104,2104","t_epoch":1680774413,"template_id":135,"time_on_site_visit":250,"url":"https://en.akinator.mobi/game","user_id":0,"weather_precipitation":0,"weather_summary":"","weather_temperature":0,"word_count":79,"worst_bad_word_level":0};var _ezim_d = {"akinator_mobi-box-2":{"adsense_stat_source_id":5,"adx_ad_count":3,"adx_stat_source_id":35,"full_id":"akinator_mobi-box-2/2023-04-06/5029392646391434","height":"50v2","position_id":2104,"sub_position_id":2104,"width":"300"},"akinator_mobi-box-2_1":{"adsense_stat_source_id":5,"adx_ad_count":3,"adx_stat_source_id":35,"full_id":"akinator_mobi-box-2/2023-04-06/5029392646391434","height":"50v2","position_id":2104,"sub_position_id":2104,"width":"300"},"akinator_mobi-medrectangle-1":{"adsense_stat_source_id":5,"adx_ad_count":3,"adx_stat_source_id":35,"full_id":"akinator_mobi-medrectangle-1/2023-04-06/1425365912396019","height":"280","position_id":2102,"sub_position_id":2102,"width":"336"}};var _ezat = {"domain_id":130066,"form_factor_id":2,"framework_id":2,"pageview_date":"2023-04-06","pageview_id":"76c0a4e6-d0ce-4e0e-626d-5930c39e25fb","template_id":135,"url":"https://en.akinator.mobi/game","visit_uuid":"ee713bfd-0687-43a3-50e9-e37d3d202516"};</script><script data-ezscrex="false" data-pagespeed-no-defer data-cfasync="false" type="text/javascript">__ez.queue.addFile('banger.js', '/porpoiseant/banger.js?cb=195-4&bv=210&v=74&PageSpeed=off', true, [], true, false, false, true);</script>
+<script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer>!function(){var e;__ez.vep=(e=[],{Add:function(i,t){__ez.dot.isDefined(i)&&__ez.dot.isValid(t)&&e.push({type:"video",video_impression_id:i,domain_id:__ez.dot.getDID(),t_epoch:__ez.dot.getEpoch(0),data:__ez.dot.dataToStr(t)})},Fire:function(){if(void 0===document.visibilityState||"prerender"!==document.visibilityState){if(__ez.dot.isDefined(e)&&e.length>0)for(;e.length>0;){var i=5;i>e.length&&(i=e.length);var t=e.splice(0,i),o=__ez.dot.getURL("/detroitchicago/grapefruit.gif")+"?orig="+(!0===__ez.template.isOrig?1:0)+"&v="+btoa(JSON.stringify(t));__ez.dot.Fire(o)}e=[]}}})}();</script><script data-ezscrex='false' data-cfasync='false' data-pagespeed-no-defer></script>
+        
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+        <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <![endif]-->
+        <title>    Play a new game!
+</title>
+        <meta name="description" content="    Start a game : what do you want me to guess? Characters, objects, animals, movies?
+"/>
+        <meta name="author" content="Elokence"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+                
+
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v95"/>
+                                <link rel="icon" type="image/png" sizes="48x48" href="/favicon-2022-Akinator-48x48.png?v95"/>
+        <link rel="manifest" href="/site.webmanifest"/>
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name="theme-color" content="#ffffff"/>
+
+                <!--BEGIN FIRSTIMPRESSION TAG - http://akinator.com -->
+        <script data-cfasync="false" type="text/javascript">
+                window.apd_options = { 'websiteId': 7256, 'runFromFrame': false };
+                (function() {
+                        var w = window.apd_options.runFromFrame ? window.top : window;
+                        if(window.apd_options.runFromFrame && w!=window.parent) w=window.parent;
+                        if (w.location.hash.indexOf('apdAdmin') != -1){if(typeof(Storage) !== 'undefined') {w.localStorage.apdAdmin = 1;}}
+                        var adminMode = ((typeof(Storage) == 'undefined') || (w.localStorage.apdAdmin == 1));
+                        w.apd_options=window.apd_options;
+                        var apd = w.document.createElement('script'); apd.type = 'text/javascript'; apd.async = true;
+                        apd.src = '//' + (adminMode ? 'cdn' : 'ecdn') + '.firstimpression.io/' + (adminMode ? 'fi.js?id=' + window.apd_options.websiteId : 'fi_client.js') ;
+                        var s = w.document.getElementsByTagName('head')[0]; s.appendChild(apd);
+                })();</script>
+        <!-- END FIRSTIMPRESSION TAG -->
+
+                    <link href="/css/site_mobile.css?v95" rel="stylesheet" media="screen"/>
+        
+        
+                                                                                                <!-- MANDATORY: BEGIN IAB STUB -->
+        <script type="text/javascript">
+            "use strict";!function(){var e=function(){var e,t="__tcfapiLocator",a=[],n=window;for(;n;){try{if(n.frames[t]){e=n;break}}catch(e){}if(n===window.top)break;n=n.parent}e||(!function e(){var a=n.document,r=!!n.frames[t];if(!r)if(a.body){var s=a.createElement("iframe");s.style.cssText="display:none",s.name=t,a.body.appendChild(s)}else setTimeout(e,5);return!r}(),n.__tcfapi=function(){for(var e,t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];if(!n.length)return a;if("setGdprApplies"===n[0])n.length>3&&2===parseInt(n[1],10)&&"boolean"==typeof n[3]&&(e=n[3],"function"==typeof n[2]&&n[2]("set",!0));else if("ping"===n[0]){var s={gdprApplies:e,cmpLoaded:!1,cmpStatus:"stub"};"function"==typeof n[2]&&n[2](s)}else a.push(n)},n.addEventListener("message",(function(e){var t="string"==typeof e.data,a={};try{a=t?JSON.parse(e.data):e.data}catch(e){}var n=a.__tcfapiCall;n&&window.__tcfapi(n.command,n.version,(function(a,r){var s={__tcfapiReturn:{returnValue:a,success:r,callId:n.callId}};t&&(s=JSON.stringify(s)),e&&e.source&&e.source.postMessage&&e.source.postMessage(s,"*")}),n.parameter)}),!1))};"undefined"!=typeof module?module.exports=e:e()}();
+        </script>
+        <!-- MANDATORY: END IAB STUB -->
+        <!-- ADD EVENTILISTNER -->
+        <script type="text/javascript">
+            (adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=1,window.dataLayer=window.dataLayer||[],__tcfapi("addEventListener",2,function(e,n){if(n&&e.gdprApplies&&("tcloaded"===e.eventStatus||"useractioncomplete"===e.eventStatus)){if((adsbygoogle=window.adsbygoogle||[]).pauseAdRequests=0,e.purpose.consents)
+                for(var s in window.dataLayer.push({AppConsent_IAB_PURPOSES:e.purpose.consents}),e.purpose.consents)e.purpose.consents[s]&&window.dataLayer.push({event:"appconsent_ctrl_"+s});var o,a;e.acExtraPurposes&&(o={},e.acExtraPurposes.forEach(function(e){o[e]=!0}),window.dataLayer.push({AppConsent_EXTRA_PURPOSES:o})),e.acExtraVendors&&(a={},e.acExtraVendors.forEach(function(e){a[e]=!0}),window.dataLayer.push({AppConsent_EXTRA_VENDORS:a})),e.purpose.consents&&e.vendor.consents&&("object"==typeof sfbxguardian&&e.purpose.consents[1]&&window.sfbxguardian.unblock(),"function"==typeof gtag&&(e.purpose.consents[1]&&e.vendor.consents[755]?gtag("consent","update",{analytics_storage:e.purpose.consents[7]||e.purpose.consents[9]?"granted":"denied",ad_storage:e.purpose.consents[3]?"granted":"denied "}):gtag("consent","update",{analytics_storage:"denied",ad_storage:"denied"})))}window.dataLayer.push({event:"appconsent_loaded"})});
+        </script>
+        <!-- END EVENTILISTNER -->
+            <style id='ezoicCSS'>.ezoic-at-0{text-align:center !important;float:none !important;max-width:100% !important;line-height:0px;}
+.ezoic-ad.box-2104{width:320px;margin-top:0px !important;margin-right:auto !important;margin-bottom:0px !important;display:block !important;min-height:0px !important;margin-left:auto !important;background:0 0 !important;padding:0;}
+.ezoic-ad.medrectangle-1102{justify-content:center;padding-bottom:20px !important;margin-left:0px !important;flex-direction:column !important;padding-top:20px !important;display:flex !important;align-items:center;margin-bottom:15px !important;min-height:600px;margin-top:35px !important;margin-right:0px !important;}
+.ezoic-ad{display:inline-block;border:0px;}.ezoic-ad>div>iframe{margin:0px!important;padding:0px!important;}
+.ezoic-floating-bottom { display: none!important; }</style><script type="text/javascript">var ezouid = "1";</script><base href="https://en.akinator.mobi/game"><script type='text/javascript'>
+var ezoTemplate = 'pub_site_mobile';
+if(typeof ezouid == 'undefined')
+{
+    var ezouid = 'none';
+}
+var ezoFormfactor = '2';
+var ezo_elements_to_check = Array();
+</script><!-- START EZHEAD -->
+<script data-ezscrex="false" type='text/javascript'>
+var soc_app_id = '0';
+var did = 130066;
+var ezdomain = 'akinator.mobi';
+var ezoicSearchable = 1;
+</script>
+<!--{jquery}-->
+<!-- END EZHEAD -->
+<script data-ezscrex='false' data-pagespeed-no-defer data-cfasync='false'>
+function create_ezolpl(pvID, rv) {
+    var d = new Date();
+    d.setTime(d.getTime() + (365*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    __ez.ck.setByCat("ezux_lpl_130066=" + new Date().getTime() + "|" + pvID + "|" + rv + "; " + expires, 3);
+}
+function attach_ezolpl(pvID, rv) {
+    if (document.readyState === "complete") {
+        create_ezolpl(pvID, rv);
+    }
+    if(window.attachEvent) {
+        window.attachEvent("onload", create_ezolpl, pvID, rv);
+    } else {
+        if(window.onload) {
+            var curronload = window.onload;
+            var newonload = function(evt) {
+                curronload(evt);
+                create_ezolpl(pvID, rv);
+            };
+            window.onload = newonload;
+        } else {
+            window.onload = create_ezolpl.bind(null, pvID, rv);
+        }
+    }
+}
+
+__ez.queue.addFunc("attach_ezolpl", "attach_ezolpl", ["76c0a4e6-d0ce-4e0e-626d-5930c39e25fb", "false"], false, ['/detroitchicago/boise.js'], true, false, false, false);
+</script>
+<script type="text/javascript">var _audins_dom="akinator_mobi",_audins_did=130066;__ez.queue.addFile('/detroitchicago/cmbv2.js', '/detroitchicago/cmbv2.js?gcb=195-4&cb=04-3y02-8y06-13y07-2y0b-6y0d-23y17-4y1b-5y25-3y33-4y3c-12y3d-5y5f-2&cmbcb=132&sj=x04x02x06x07x0bx0dx17x1bx25x33x3cx3dx5f&abt=RefreshTest', true, [], true, false, true, false);</script>
+<script type="text/javascript" defer>__ez.queue.addFile('/detroitchicago/cmbdv2.js', '/detroitchicago/cmbdv2.js?gcb=195-4&cb=03-8y0c-6y1c-5&cmbcb=132&sj=x03x0cx1c&abt=RefreshTest', true, ['/detroitchicago/cmbv2.js'], true, false, true, false);</script></head>
+    <body><script>var ezAardvarkDetected;function ezDetectAardvark(){if(typeof __ez!=='undefined'&&typeof __ez.bit!=='undefined'){let bait=document.createElement("div");bait.className="textads banner-ads banner_ads ad-unit ad-zone ad-space adsbox";bait.style.height="1px";document.body.appendChild(bait);let baitOffsetHeight=bait.offsetHeight;if(baitOffsetHeight){ezAardvarkDetected=false;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',false))]);}
+else{ezAardvarkDetected=true;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',true))]);}
+var observer=new MutationObserver(function(e){if(e[0].removedNodes){ezAardvarkDetected=true;__ez.bit.AddAndFire(window["_ezaq"]["page_view_id"],[(new __ezDotData('is_ad_blocked',true))]);}});observer.observe(bait,{childList:true,attributes:true});}}
+window.addEventListener('load',(e)=>{ezDetectAardvark();});</script>
+        <!--<script src="https://contributor.google.com/scripts/7a0eb33888399be3/loader.js"></script>
+    <script>
+        window.googlefc = window.googlefc || {}; googlefc.callbackQueue = googlefc.callbackQueue || [];
+    </script>
+    <script src="https://fundingchoices.google.com/f/AGSKWxVF8GEqksmd_Iw7ZLcN-WSSFTgZAkKuO_pxucbjLH5a_t-TxYGDC3bWB5h5qnjyBxjv1zuD0Ig="></script>
+    <script>
+        (function() {
+            function signalGooglefcPresent() {
+                if (!window.frames['googlefcPresent']) {
+                    if (document.body) {
+                        const iframe = document.createElement('iframe');
+                        iframe.style = 'display: none; width: 0px; height: 0px; border: none; ' + 'z-index: -1000; left: -1000px; top: -1000px;';
+                        iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);
+                    } else {
+                        setTimeout(signalGooglefcPresent, 0);
+                    }
+                }
+            }
+            signalGooglefcPresent();
+        })();
+    </script>-->
+            
+        
+    <header>
+        <div class="container">
+            <div class="row">
+                
+                                <div id="lang-switch-container">
+                    <div class="lang-switcher">
+                                                <div class="lang-selected">
+    <span class="lang-label">English</span>
+    <span class="flag-icon flag-icon-gb"></span>        
+</div>
+<div class="dropdown-lang dialog-box selector">
+    <div></div>
+    <ul>
+                    <li>
+                <a href="https://jp.akinator.mobi">日本<span class="flag-icon flag-icon-jp"></span></a>
+            </li>
+                    <li>
+                <a href="https://de.akinator.mobi">Deutsch<span class="flag-icon flag-icon-de"></span></a>
+            </li>
+                    <li>
+                <a href="https://pt.akinator.mobi">Português<span class="flag-icon flag-icon-pt"></span></a>
+            </li>
+                    <li>
+                <a href="https://ar.akinator.mobi">العربية<span class="flag-icon flag-icon-sa"></span></a>
+            </li>
+                    <li>
+                <a href="https://fr.akinator.mobi">Français<span class="flag-icon flag-icon-fr"></span></a>
+            </li>
+                    <li>
+                <a class="current" href="https://en.akinator.mobi">English<span class="flag-icon flag-icon-gb"></span></a>
+            </li>
+                    <li>
+                <a href="https://es.akinator.mobi">Español<span class="flag-icon flag-icon-es"></span></a>
+            </li>
+                    <li>
+                <a href="https://ru.akinator.mobi">русский<span class="flag-icon flag-icon-ru"></span></a>
+            </li>
+                    <li>
+                <a href="https://il.akinator.mobi">עברית<span class="flag-icon flag-icon-il"></span></a>
+            </li>
+                    <li>
+                <a href="https://cn.akinator.mobi">中文<span class="flag-icon flag-icon-cn"></span></a>
+            </li>
+                    <li>
+                <a href="https://it.akinator.mobi">Italiano<span class="flag-icon flag-icon-it"></span></a>
+            </li>
+                    <li>
+                <a href="https://kr.akinator.mobi">한국어<span class="flag-icon flag-icon-kr"></span></a>
+            </li>
+                    <li>
+                <a href="https://tr.akinator.mobi">Türkçe<span class="flag-icon flag-icon-tr"></span></a>
+            </li>
+                    <li>
+                <a href="https://nl.akinator.mobi">Nederlands<span class="flag-icon flag-icon-nl"></span></a>
+            </li>
+                    <li>
+                <a href="https://pl.akinator.mobi">Polski<span class="flag-icon flag-icon-pl"></span></a>
+            </li>
+                    <li>
+                <a href="https://id.akinator.mobi">Indonesian<span class="flag-icon flag-icon-id"></span></a>
+            </li>
+            </ul>
+</div>
+                    </div>
+                </div>
+                
+                                <div class="text-center" id="logo-container">
+                    <a href="/">
+                        <img class="logo" src="/bundles/elokencesitemobile/images/logo_akinator.png?v95" alt="logo akinator" height="auto"/>
+                    </a>
+                </div>
+                
+                                <div id="child-filter-container">
+                                                                <div class="mode-enfant"> <!-- Ajouter class "disabled" -->
+                            <input type="checkbox" id="tgl-enfant" class="tgl tgl-light"/> <!-- Ajouter "disabled="disabled"" -->
+                            <label class="tgl-btn" title="Inactive" for="tgl-enfant">
+                                <div class="background" data-label-false="Inactive" data-label-true="Active">
+                                </div>
+                            </label>
+                            <p>Sensitive content</p>
+                        </div>
+                                    </div>
+            </div>
+            <div class="row">
+                                <div class="pub-banner" style="display: flex; justify-content: center;">
+                    <!-- Ezoic - Banner_top - sidebar -->
+                    <span id="ezoic-pub-ad-placeholder-104"></span><span class="ezoic-ad ezoic-at-0 box-2 box-2104 adtester-container adtester-container-104 ezoic-ad-adaptive" data-ez-name="akinator_mobi-box-2"><span class="ezoic-ad box-2 box-2-multi-104 adtester-container adtester-container-104" data-ez-name="akinator_mobi-box-2"><span id="div-gpt-ad-akinator_mobi-box-2-0" ezaw="320" ezah="50" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:50px;min-width:320px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[320,50],'akinator_mobi-box-2','ezslot_0',104,'0','0'])};__ez_fad_position('div-gpt-ad-akinator_mobi-box-2-0');</script></span></span><span class="ezoic-ad box-2 box-2-multi-104 adtester-container adtester-container-104" data-ez-name="akinator_mobi-box-2"><span id="div-gpt-ad-akinator_mobi-box-2-0_1" ezaw="320" ezah="50" style="position:relative;z-index:0;display:inline-block;padding:0;min-height:50px;min-width:320px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[320,50],'akinator_mobi-box-2','ezslot_1',104,'0','1'])};__ez_fad_position('div-gpt-ad-akinator_mobi-box-2-0_1');</script></span></span><style> .box-2-multi-104{border:none !important;display:block !important;float:none !important;line-height:0px;margin-bottom:7px !important;margin-left:auto !important;margin-right:auto !important;margin-top:12px !important;max-width:100% !important;min-height:50px;padding:0;text-align:center !important;}</style></span>
+                    <!-- End Ezoic - Banner_top - sidebar -->
+                </div>
+            </div>
+        </div>
+            </header>
+
+    <section>
+        <div class="body-section">
+            <div class="container">
+                
+    <div id="game_content" class="overlayed">
+
+        <div id="div-overlay">
+            <img src="/bundles/elokencesitemobile/images/loader.svg?v95"/>
+        </div>
+        
+        <div class="akinator">
+            <div class="akinator-body">
+                <img src="/bundles/elokencesitemobile/images/akitudes_520x650/defi.png?v95"/>
+            </div>
+        </div>
+        
+        <div class="question_container">
+            <div class="bubble-question bubble">
+                <div class="bubble-tail"><p class="question-number">01</p></div>
+                <div class="bubble-body"><p class="question-text">Loading ...</p></div>
+            </div>
+        </div>
+            
+        <div class="reponses_container">
+            <div class="selector text-center">
+
+                <div class="dialog-box">
+                    <ul>
+                        <li>
+                            <a class="current" href="javascript:void(0);" id="a_yes"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="a_no"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="a_dont_know"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="a_probably"></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" id="a_probaly_not"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div id="customModal" class="modal fade" role="dialog" data-backdrop="false">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+            </div>
+                    </div>
+    </section>
+
+    <footer>
+        <div class="top-footer">
+            <div class="container">
+                <div class="row">
+
+                                        <div class="pub-banner">
+                        <!-- Ezoic - Banner_bottom - sidebar_bottom -->
+                        <span id="ezoic-pub-ad-placeholder-102"></span><span class="ezoic-ad ezoic-at-0 medrectangle-1 medrectangle-1102 adtester-container adtester-container-102" data-ez-name="akinator_mobi-medrectangle-1"><span id="div-gpt-ad-akinator_mobi-medrectangle-1-0" ezaw="336" ezah="280" style="position:relative;z-index:0;display:inline-block;padding:0;width:100%;max-width:1200px;margin-left:auto !important;margin-right:auto !important;min-height:280px;min-width:336px;" class="ezoic-ad"><script data-ezscrex="false" data-cfasync="false" type="text/javascript" style="display:none;">if(typeof ez_ad_units != 'undefined'){ez_ad_units.push([[336,280],'akinator_mobi-medrectangle-1','ezslot_2',102,'0','0'])};__ez_fad_position('div-gpt-ad-akinator_mobi-medrectangle-1-0');</script></span></span>
+                        <!-- End Ezoic - Banner_bottom - sidebar_bottom -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle-footer">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-md-3">
+                        <ul class="social-network social-circle">   
+    <li>FOLLOW ME</li>
+    <li><a href="https://www.facebook.com/Akinator/" target="_blank" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="https://twitter.com/akinator_team" target="_blank" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="https://plus.google.com/115962598465031327867" target="_blank" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+</ul>
+                    </div>
+                    <div class="col-md-9">
+                                                <div class="menu">
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/contact?realfrom=website-mobile">Contact us</a></li>
+                    <li><a href="/mobilecontent/5/legal-notices">Legal</a></li>
+                    <li><a href="/mobilecontent/4/terms-of-service">Terms</a></li>
+                    <li><a href="/mobilecontent/7/about-us">About us</a></li>
+                    <li><a href="/mobilecontent/13/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/mobilecontent/6/everything-you-ve-always-wanted-to-know-about-akinator">FAQ</a></li>
+                    <li><a href="/mobilecontent/8/akinator-in-the-media">Press</a></li>
+            </ul>
+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="row">
+                    <p>
+                                                    (1)
+                                                 © 2017 <a href="https://www.elokence.com" target="_blank">Elokence</a> - All rights reserved
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+        <div id="adblockDetected" class="modal fade" style="top:30%;" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p style="font-size: 14px;">Akinator.com works mainly through advertising. If you enjoy our content, please deactivate your adblocker on Akinator.com.</p>
+                    <img id="adblockHelper" src="" alt=""/>
+                    <p style="font-size: 14px;">For all questions relating to advertising please leave us a message here</p>
+                    <a href="//en.akinator.com/contact?realfrom=website-mobile">Contact us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        
+        
+        
+        <script type="text/javascript" src="/js/site_mobile.js?v95"></script>
+        
+                    <script type="text/javascript">
+        var uid_ext_session = 'f677f8f2-d45f-11ed-92ca-0cc47a691510';
+        var frontaddr = 'MTQ3LjEzNS4xMjkuOTM=';
+    </script>
+
+    <script src="/bundles/fosjsrouting/js/router.js?v95"></script>
+    <script src="/js/routing?callback=fos.Router.setData"></script>
+
+        <script src="/bundles/bazingajstranslation/js/translator.min.js?v95"></script>
+    <script src="https://en.akinator.mobi/translations"></script>
+
+        <script type="text/javascript" src="/js/workflow_game_mobile.js?v95"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            /**********************/
+            /*  Gestion UI  */
+            /**********************/
+
+            // Affichage de l'état du filtre enfant (on verrouille le changement du filtre enfant pendant le jeu)
+            var childFilterState = $.elokWrapperStorage.get('childFilter');
+
+            if (childFilterState == true) {
+
+                $('#tgl-enfant').trigger('click');
+                $('div.mode-enfant').find('label.tgl-btn').removeClass('child-mod-deactivated');
+                $('div.mode-enfant').find('div.background').removeClass('child-mod-deactivated');
+
+            } else {
+
+                $('div.mode-enfant').find('label.tgl-btn').addClass('child-mod-deactivated');
+                $('div.mode-enfant').find('div.background').addClass('child-mod-deactivated');
+            }
+            
+            // Verrouillage du changement du filtre enfant
+            $('div.mode-enfant').addClass('disabled');
+            $('div.mode-enfant>input').addClass('disabled');
+
+            $('#tgl-enfant').on('click', function(event) {
+
+                event.preventDefault();
+            });
+
+
+
+            /**********************/
+            /*  Gestion Workflow  */
+            /**********************/
+
+            // On declenche manuellement le new session
+            $('body').trigger('new_session');
+        });
+    </script>
+                
+
+            <!-- Google ANALYTICS V4 - en test, Global site tag (gtag.js) - Google Analytics V4 => test en cours, cohabitation avec universal analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LY61K7D00G"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-LY61K7D00G');
+        </script>
+    
+        
+        <script src="https://cdn.appconsent.io/loader-clear.js" defer="" async=""></script>
+    <script type="text/javascript">
+        __tcfapi('init', 2, function() {}, {
+            appKey: '0fb1b45c-1005-4ca2-a9bb-c44d023adb7c',
+            forceGDPRApplies: true
+        });
+        __tcfapi('show', 2, function() {}, {
+            lazy: true,
+        });
+    </script>
+        
+<script type="text/javascript">
+				var __inScopeForCCPA = false;
+		function __uspapi(command, version, callback) {
+			var response = null;
+			var successs = false;
+			if (command === "getUSPData" && version === 1) {
+				var uspString = "1"; // Version
+				if (__inScopeForCCPA) {
+					uspString += "Y"; // Has Explicit Notice for Opt Out been provided (ex footer or minor consent modal)
+					var result;
+					var consentCookie = (result = new RegExp('(?:^|; )ezoccpaconsent=([^;]*)').exec(document.cookie)) ? (result[1]) : null;
+					if (consentCookie === "nonconsent") {
+						uspString += "Y";
+					}
+					else {
+						uspString += "N";
+					}
+					uspString += "N" // Is pub a signatory to the IAB Limited Service Provider Agreement (http://www.iabprivacy.com/)
+				}
+				else {
+					uspString += "---";
+				}
+				response = {
+					uspString: uspString,
+					version: 1
+				};
+				success = true;
+			}
+			return callback(response, success);
+		};
+		function __receiveUspapiMessage(event) {
+			if (event.data.hasOwnProperty('__uspapiCall')) {
+				__uspapi('getUSPData', 1, function(uspData, success) {
+					event.source.postMessage({
+						__uspapiReturn: {
+							returnValue: uspData,
+							success: success,
+							callId: event.data.__uspapiCall.callId
+						}
+					},
+					event.origin);
+				});
+			}
+			return null;
+		};
+		window.addEventListener("message", __receiveUspapiMessage, false);
+</script>
+<script>function __ez_fad_ezpbinit(){var s = document.createElement( 'script' );
+	s.setAttribute( 'src', '//go.ezodn.com/hb/dall.js?cb=195-4-55' );
+	s.onerror = function () {window.ezDallErr = true};
+	document.body.appendChild( s );}__ez.queue.addFile('/detroitchicago/kenai.js', '/detroitchicago/kenai.js?gcb=4&cb=5', false, [], true, false, true, false);var ezVidoomy={bidder:'vidoomy',params:{"id":"29829","pid":"62295","zoneId":"29829"}};var ezAMX={bidder:'amx',params:{tagId:'ZXpvaWMuY29t'}};var ezMedianet={bidder:'medianet',params:{"cid":"8CUBCB617","crid":"649301216"}};var ezjsps=function(obj){return JSON.parse(JSON.stringify(obj));};var epbjs=epbjs||{};epbjs.que=epbjs.que||[];epbjs.bidderTimeout=2000;epbjs.useAdj=true;epbjs.SS={"amx":11290,"appnexus":10087,"ix":10082,"luponmedia":11300,"medianet":11307,"openx":10015,"rubicon":10063,"sharethrough":11309,"vidoomy":11331};epbjs.bidders=['amx','appnexus','ix','luponmedia','medianet','openx','rubicon','sharethrough','vidoomy'];epbjs.que.push(function(){});epbjs.bidderSettings={};epbjs.gadj=1.000000;var __enableAnalytics=false;epbjs.testFeatures=[''];
+var __s2sbidders=[];
+var __s2sinstreambidders=[];
+var __allBidders=['vidoomy','openx','rubicon','ix','appnexus','amx','medianet','luponmedia','sharethrough'];
+__ez.queue.addFile('/detroitchicago/houston.js', '/detroitchicago/houston.js?gcb=4&cb=73', true, [], true, false, true, false);__ez.queue.addFunc("epbjsRequestAdUnits", "epbjsRequestAdUnits", [[{code: 'div-gpt-ad-akinator_mobi-box-2-0', mediaTypes: {banner: { sizes:[[320,50]] }}, bids: [ezjsps(ezVidoomy),{bidder: 'openx',params: { delDomain: 'ezoic-d.openx.net', unit: '559076577' }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'ix', params: { siteId: '305165', size: [320,50], video: {} }},{bidder: 'appnexus', params: { placementId: '20065486', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezAMX),ezjsps(ezMedianet),{bidder: 'luponmedia', params: { keyId: 'uid_akinatormobi-ez', siteId: 8036 }},{bidder:'sharethrough',params:{pkey:'5gzYNelAhqAJdUsxklEIZrnd'}}] ,sizeMapping: [
+			{
+				minWidth: 320,
+				sizes: [[320,50]]
+			}]},{code: 'div-gpt-ad-akinator_mobi-box-2-0_1', mediaTypes: {banner: { sizes:[[320,50]] }}, bids: [ezjsps(ezVidoomy),{bidder: 'openx',params: { delDomain: 'ezoic-d.openx.net', unit: '559076577' }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'ix', params: { siteId: '305165', size: [320,50], video: {} }},{bidder: 'appnexus', params: { placementId: '20065486', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezAMX),ezjsps(ezMedianet),{bidder: 'luponmedia', params: { keyId: 'uid_akinatormobi-ez', siteId: 8036 }},{bidder:'sharethrough',params:{pkey:'5gzYNelAhqAJdUsxklEIZrnd'}}] ,sizeMapping: [
+			{
+				minWidth: 320,
+				sizes: [[320,50]]
+			}]},{code: 'div-gpt-ad-akinator_mobi-medrectangle-1-0', mediaTypes: {banner: { sizes:[[336,280],[300,250]] }}, bids: [ezjsps(ezVidoomy),{bidder: 'openx',params: { delDomain: 'ezoic-d.openx.net', unit: '559076577' }},{bidder: 'rubicon', params:{ accountId: '21150', siteId: '351284', zoneId: '1868548' }},{bidder: 'ix', params: { siteId: '305168', size: [336,280], video: {} }},{bidder: 'appnexus', params: { placementId: '20065486', video: {skippable: true, playback_method: ['auto_play_sound_off']}}},ezjsps(ezAMX),ezjsps(ezMedianet),{bidder: 'luponmedia', params: { keyId: 'uid_akinatormobi-ez', siteId: 8036 }},{bidder:'sharethrough',params:{pkey:'Vqh9A2nu0ACUssgx5gyWaEde'}}] }]], false, ['/detroitchicago/houston.js'], true, true, true, true);var ez__id5pd = 'MTA9MzcuMjM3LjE3OC4xOCYxMj1Nb3ppbGxhJTJGNS4wKyUyOExpbnV4JTNCK0FuZHJvaWQrMTMlM0IrU00tQTEzNUYlMjkrQXBwbGVXZWJLaXQlMkY1MzcuMzYrJTI4S0hUTUwlMkMrbGlrZStHZWNrbyUyOStDaHJvbWUlMkYxMTEuMC4wLjArTW9iaWxlK1NhZmFyaSUyRjUzNy4zNg==';var ez__uIdHash = 'abddce05dc80a30282692533ae232d60aed4f7c99ef56ef2beb8dc4ba592ff3c';var ez__sspDomain = 'en.akinator.mobi';</script>
+<script>var __ez_tkn_evnt = function() { if(typeof(_ezaq) != 'undefined'){if(typeof window.ezogtk !== "undefined" && window.ezogtk !== "") {__ez.bit.AddAndFire(_ezaq.page_view_id,[new __ezDotData("ext_user_hash",window.ezogtk)]);}}};document.addEventListener("DOMContentLoaded", __ez.queue.addFunc("__ez_tkn_evnt", "__ez_tkn_evnt", event, false, ['/detroitchicago/minneapolis.js','/detroitchicago/memphis.js'], true, true, false, true));</script>
+<script src="/detroitchicago/augusta.js?cb=24" async data-ezscrex="false"></script>
+<script async data-ezscrex="false">__ez.fads.cmd.push(function(){__ez.fads.__ez_fad_load(0,0);__ez.fads.__ez_fad_scrollmon();});</script>
+<script src="https://api.fouanalytics.com/api/init-1632lqsy2s4fklqsvsii.js" data-cfasync="false" async></script><noscript><img src="https://api.fouanalytics.com/api/noscript-1632lqsy2s4fklqsvsii.gif"></noscript>
+<script type="text/javascript" data-cfasync="false"></script>
+<script type="text/javascript" style='display:none;'>var __ez_dims = (function() {
+		var setCookie = function( name, content, expiry ) {
+			return document.cookie = name+'='+content+((expiry)?';expires='+(new Date(Math.floor(new Date().getTime()+expiry*1000)).toUTCString()):'')+';path=/';
+		};
+		var ffid = 2;
+		var oh = window.screen.height;
+		var ow = window.screen.width;
+		var h = ffid === 1 ? oh : (oh > ow) ? oh : ow;
+		var w = ffid === 1 ? ow : (oh > ow) ? ow : oh;
+		var uh = window.innerHeight || document.documentElement.clientHeight || document.getElementsByTagName('body')[0].clientHeight;
+		var uw = window.innerWidth || document.documentElement.clientWidth || document.getElementsByTagName('body')[0].clientWidth;
+		setCookie('ezds', encodeURIComponent('ffid='+ffid+',w='+w+',h='+h), (31536e3*7));
+		setCookie('ezohw', encodeURIComponent('w='+uw+',h='+uh), (31536e3*7));
+	})();</script><script type='text/javascript' style='display:none;' async>
+</script>
+</body></html>
